@@ -15,13 +15,15 @@ class Home extends StatefulWidget {
 }
 
 class _Home extends State<Home> {
-  FaceDetector faceDetector =
-      GoogleMlKit.vision.faceDetector(FaceDetectorOptions(
-    enableContours: true,
-    enableClassification: true,
-    mode: FaceDetectorMode.accurate,
-    //enableTracking: true,
-  ));
+  FaceDetector faceDetector = GoogleMlKit.vision.faceDetector(
+    FaceDetectorOptions(
+      enableContours: true,
+      enableClassification: true,
+      enableLandmarks: true,
+      //mode: FaceDetectorMode.accurate,
+      //enableTracking: true,
+    ),
+  );
   bool isBusy = false;
   CustomPaint? customPaint;
 
@@ -51,12 +53,6 @@ class _Home extends State<Home> {
     }
   }
 
-  // Future<File> saveImagePermanently(String imagePath) async {
-  //   final directory = await getAplicationDocumentDirectory();
-  //   final name = baseName(imagePath);
-  //   final image = File('${directory.path}/$name');
-  //   return File(imagePath).copy(image.path);
-  // }
 
   @override
   Widget build(BuildContext context) {

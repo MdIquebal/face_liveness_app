@@ -1,7 +1,6 @@
-import 'package:face/screen/image_pick.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-//import 'screen/home.dart';
+import 'screen/home.dart';
 import 'package:camera/camera.dart';
 
 List<CameraDescription> cameras = [];
@@ -15,7 +14,7 @@ void main() async {
       getPages: [
         GetPage(
           name: '/',
-          page: () => ImagePicker(),
+          page: () => Home(),
           transition: Transition.fadeIn,
         ),
         
