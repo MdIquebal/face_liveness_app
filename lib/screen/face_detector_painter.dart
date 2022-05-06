@@ -45,7 +45,7 @@ class FaceDetectorPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final Paint paint = Paint()
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 3.0
+      ..strokeWidth = 2.0
       ..color = Color.fromARGB(255, 0, 255, 55);
 
     for (final Face face in faces) {
@@ -76,21 +76,21 @@ class FaceDetectorPainter extends CustomPainter {
         }
       }
 
-      // paintContour(FaceContourType.face);
-      // paintContour(FaceContourType.leftEyebrowTop);
-      // paintContour(FaceContourType.leftEyebrowBottom);
-      // paintContour(FaceContourType.rightEyebrowTop);
-      // paintContour(FaceContourType.rightEyebrowBottom);
-      // paintContour(FaceContourType.leftEye);
-      // paintContour(FaceContourType.rightEye);
-      // paintContour(FaceContourType.upperLipTop);
-      // paintContour(FaceContourType.upperLipBottom);
-      // paintContour(FaceContourType.lowerLipTop);
-      // paintContour(FaceContourType.lowerLipBottom);
-      // paintContour(FaceContourType.noseBridge);
-      // paintContour(FaceContourType.noseBottom);
-      // paintContour(FaceContourType.leftCheek);
-      // paintContour(FaceContourType.rightCheek);
+      paintContour(FaceContourType.face);
+      paintContour(FaceContourType.leftEyebrowTop);
+      paintContour(FaceContourType.leftEyebrowBottom);
+      paintContour(FaceContourType.rightEyebrowTop);
+      paintContour(FaceContourType.rightEyebrowBottom);
+      paintContour(FaceContourType.leftEye);
+      paintContour(FaceContourType.rightEye);
+      paintContour(FaceContourType.upperLipTop);
+      paintContour(FaceContourType.upperLipBottom);
+      paintContour(FaceContourType.lowerLipTop);
+      paintContour(FaceContourType.lowerLipBottom);
+      paintContour(FaceContourType.noseBridge);
+      paintContour(FaceContourType.noseBottom);
+      paintContour(FaceContourType.leftCheek);
+      paintContour(FaceContourType.rightCheek);
 
     }
   }

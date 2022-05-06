@@ -12,7 +12,7 @@ class CameraView extends StatefulWidget {
       {Key? key,
       required this.customPaint,
       required this.onImage,
-      this.initialDirection = CameraLensDirection.back})
+      this.initialDirection = CameraLensDirection.front})
       : super(key: key);
 
   final CustomPaint? customPaint;
@@ -40,11 +40,11 @@ class _CameraViewState extends State<CameraView> {
     _startLiveFeed();
   }
 
-  @override
-  void dispose() {
-    _stopLiveFeed();
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   _stopLiveFeed();
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -82,11 +82,11 @@ class _CameraViewState extends State<CameraView> {
     });
   }
 
-  Future _stopLiveFeed() async {
-    await _controller?.stopImageStream();
-    await _controller?.dispose();
-    _controller = null;
-  }
+  // Future _stopLiveFeed() async {
+  //   await _controller?.stopImageStream();
+  //   await _controller?.dispose();
+  //   _controller = null;
+  // }
 
   Future _processCameraImage(CameraImage image) async {
     final WriteBuffer allBytes = WriteBuffer();

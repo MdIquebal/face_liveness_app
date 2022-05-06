@@ -10,6 +10,7 @@ void main() async {
 
   runApp(
     GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       getPages: [
         GetPage(
@@ -17,7 +18,6 @@ void main() async {
           page: () => Home(),
           transition: Transition.fadeIn,
         ),
-        
       ],
     ),
   );
